@@ -14,7 +14,7 @@ for line in sys.stdin:
   line=line.strip(',').split(',')
   line_len = len(line)
 
-  # Checking if the lenght is 43 is a way to ensure the data point has all 43 attributes, excluding the header or any other useless row
+  # Checking if the length is 43 is a way to ensure the data point has all 43 attributes, excluding the header or any other useless row
   if line_len == 43:
 
     # The time column is at the 20th position 
