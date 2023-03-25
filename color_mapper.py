@@ -8,6 +8,6 @@ for line in csv.reader(sys.stdin, quotechar='"'):
 
     # Many entries have '99' as Registration state, just to provide some data cleaning we ignored those
     if (color):
-      print('{}\t{}'.format(stcolorate, 1))
+      print('{}\t{}'.format(color, 1))
 
 
