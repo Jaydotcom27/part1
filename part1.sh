@@ -44,7 +44,7 @@ echo "--------------------------- Question 2.2: Most common type to be ticketed 
 echo "--------------------------- Question 3: Most common state to be ticketed (where) ---------------------------" 
 /usr/local/hadoop/bin/hdfs dfs -cat /p1/output/Q3/part-00000
 
-echo "--------------------------- Question 3: Most likely color to be ticketed (where) ---------------------------" 
+echo "--------------------------- Question 4: Most common color to be ticketed ---------------------------" 
 /usr/local/hadoop/bin/hdfs dfs -cat /p1/output/Q4/part-00000
 
 
