@@ -29,7 +29,7 @@ echo "--------------------------- Question 2.1: Most common year to be ticketed 
 /usr/local/hadoop/bin/hdfs dfs -cat /p1/output/Q2/car_year/part-00000
 
 echo "--------------------------- Question 2.2: Most common type to be ticketed ---------------------------" 
-/usr/local/hadoop/bin/hdfs dfs -cat /part1/output/Q2/car_type/part-00000
+/usr/local/hadoop/bin/hdfs dfs -cat /p1/output/Q2/car_type/part-00000
 
 /usr/local/hadoop/bin/hdfs dfs -rm -r /p1/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /p1/output/

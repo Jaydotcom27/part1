@@ -2,11 +2,10 @@
 import sys
 import csv
 
-header = sys.stdin.readline()
-
-# Type codes: --> https://data.ny.gov/api/assets/83055271-29A6-4ED4-9374-E159F30DB5AE
-
 for line in csv.reader(sys.stdin, quotechar='"'):
-    veh = line[6]
-    if veh:
-        print('{}\t{}'.format(veh, 1))
+    # Type column is at the 7th position
+    car_type = line[6]
+    if car_type:
+
+        # If we find data for the data point we map it to 1
+        print('{}\t{}'.format(car_type, 1))
