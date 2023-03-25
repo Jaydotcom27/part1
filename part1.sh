@@ -2,15 +2,15 @@
 #! /usr/bin/python
 ../start.sh
 
-/usr/local/hadoop/bin/hdfs dfs -rm -r /part1/input/
-/usr/local/hadoop/bin/hdfs dfs -rm -r /par1/output/
-/usr/local/hadoop/bin/hdfs dfs -mkdir -p /part1/input/
-/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../mapreduce-test-data/hdfstest1/nyc_parking_violations_data.csv  /part1/input/
+/usr/local/hadoop/bin/hdfs dfs -rm -r /p1/input/
+/usr/local/hadoop/bin/hdfs dfs -rm -r /p1/output/
+/usr/local/hadoop/bin/hdfs dfs -mkdir -p /p1/input/
+/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../mapreduce-test-data/hdfstest1/nyc_parking_violations_data.csv  /p1/input/
 
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar  \
 -file hour_mapper.py -mapper hour_mapper.py \
 -file reducer.py -reducer reducer.py \
--input /part1/input/* -output /part1/output/Q1/hour
+-input /p1/input/* -output /p1/output/Q1/hour
 
 # /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar  \
 # -file day_mapper.py -mapper day_mapper.py \
@@ -44,7 +44,7 @@
 
 echo "************************ Q1 When are tickets most likely to be issued? **********************************" 
 echo "******* By Hour **********************"
-/usr/local/hadoop/bin/hdfs dfs -cat /part1/output/Q1/hour/part-00000
+/usr/local/hadoop/bin/hdfs dfs -cat /p1/output/Q1/hour/part-00000
 # echo "******* By Week Day **********************"
 # /usr/local/hadoop/bin/hdfs dfs -cat /part1/output/Q1/day/part-00000
 # echo "******* By Month  **********************"
@@ -59,7 +59,7 @@ echo "******* By Hour **********************"
 # echo "********************* Q4  Which color of the vehicle is most likely to get a ticket? ********************"
 # /usr/local/hadoop/bin/hdfs dfs -cat /part1/output/Q4/part-00000
 # echo " **************************************************************"
-/usr/local/hadoop/bin/hdfs dfs -rm -r /part1/input/
-/usr/local/hadoop/bin/hdfs dfs -rm -r /part1/output/
+/usr/local/hadoop/bin/hdfs dfs -rm -r /p1/input/
+/usr/local/hadoop/bin/hdfs dfs -rm -r /p1/output/
 
 ../stop.sh
