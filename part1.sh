@@ -5,7 +5,7 @@
 /usr/local/hadoop/bin/hdfs dfs -rm -r /part1/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /par1/output/
 /usr/local/hadoop/bin/hdfs dfs -mkdir -p /part1/input/
-/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../../mapreduce-test-data/hdfstest1/parking_violations_2023.csv  /part1/input/
+/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../mapreduce-test-data/hdfstest1/parking_violations_2023.csv  /part1/input/
 
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar  \
 -file hour_mapper.py -mapper hour_mapper.py \
