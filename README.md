@@ -11,9 +11,13 @@ The following 4 questions were answered using this code:
 
 ## Getting Started
 
-To get started, clone the repository and ensure that you have Python 3 installed on your machine.
+Proceed to clone the repository into the already existing `hdfs-test` directory in our Cloud cluster.
 
 `git clone https://github.com/Jaydotcom27/part1.git`
+
+Also consider cloning some test data into the already existing `hdfs-test-data` in our Cloud cluster.
+
+`git clone https://github.com/Jaydotcom27/hdfstest1`
 
 ## Data
 
